@@ -1,0 +1,16 @@
+.home-container {
+	position: relative;
+	z-index: 1;
+	background-color: darken($color: #f6f6f6, $amount: 2);
+	border-radius: 25px;
+	display: flex;
+	row-gap: 50px;
+	justify-content: space-evenly;
+	padding: 40px;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	@media screen and(max-width: 1220px) {
+		gap: 30px;
+		row-gap: 50px;
+	}
+}

@@ -1,14 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-import GetRent from "../components/rent/GetRent";
+import GetRent from "../components/rent/GetRent/GetRent";
 
-const RentPage = styled.div``;
 const Rent = () => {
-  return (
-    <RentPage>
-      <GetRent />
-    </RentPage>
-  );
+	return (
+		<div>
+			<GetRent />
+		</div>
+	);
 };
 
 export default Rent;

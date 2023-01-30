@@ -1,0 +1,12 @@
+.footer-container {
+	background-color: black;
+	text-align: center;
+	padding: 20px;
+
+	flex-shrink: 0;
+
+	img {
+		width: 150px;
+		border: 2px solid black;
+	}
+}

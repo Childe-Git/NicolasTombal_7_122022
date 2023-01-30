@@ -1,0 +1,21 @@
+// whole app
+@import "./base/app";
+// header
+@import "./components/header";
+// rent list home
+@import "./page/home";
+@import "./components/homeBanner";
+@import "./components/rentsList";
+// about page
+@import "./page/about";
+@import "./components//aboutBanner";
+// rent page
+@import "./components/getRent";
+@import "./components/rentGallery";
+// dropdown
+@import "./components/dropdown";
+
+@import "./page/error";
+
+// footer
+@import "./components/footer";

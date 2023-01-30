@@ -1,0 +1,429 @@
+body {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.app {
+  margin: 60px auto;
+  max-width: 1340px;
+  width: 100%;
+  font-family: "Montserrat";
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-bottom: -10px;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+@media screen and (max-width: 620px) {
+  nav ul {
+    gap: 15px;
+    margin-top: 25px;
+  }
+}
+nav li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+nav li:hover {
+  animation: liAnim forwards 150ms;
+}
+@media screen and (max-width: 620px) {
+  nav li {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes liAnim {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+.home-container {
+  position: relative;
+  z-index: 1;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  display: flex;
+  row-gap: 50px;
+  justify-content: space-evenly;
+  padding: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1220px) {
+  .home-container {
+    gap: 30px;
+    row-gap: 50px;
+  }
+}
+
+.home-banner {
+  margin-top: 40px;
+  width: 100%;
+  margin-bottom: 180px;
+}
+.home-banner img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 25px;
+  filter: brightness(65%);
+}
+.home-banner .text-container {
+  margin-top: -175px;
+}
+@media screen and (max-width: 620px) {
+  .home-banner .text-container {
+    margin-top: -160px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .home-banner .text-container {
+    margin-top: -180px;
+  }
+}
+.home-banner .text-container h1 {
+  filter: brightness(100%);
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+.home-banner .text-container h1 .back-to-line {
+  display: none;
+}
+@media screen and (max-width: 620px) {
+  .home-banner .text-container h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .home-banner .text-container h1 {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.8rem;
+  }
+  .home-banner .text-container h1 .back-to-line {
+    display: block;
+  }
+}
+
+.card-container {
+  border-radius: 10px;
+  height: 340px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.5019607843));
+}
+.card-container .link {
+  text-decoration: none;
+}
+.card-container .card {
+  border-radius: 10px;
+  max-width: 340px;
+}
+.card-container .card:hover {
+  cursor: pointer;
+  animation: rentAnimCard forwards 250ms;
+}
+@keyframes rentAnimCard {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+.card-container .card img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  border-radius: 10px;
+  height: 340px;
+  object-fit: cover;
+}
+.card-container .card h2 {
+  width: 245px;
+  color: white;
+  margin-top: -55px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.about-list div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+@media screen and (max-width: 425px) {
+  .about-list div {
+    width: initial;
+  }
+}
+
+.about-banner {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about-banner img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  filter: brightness(75%);
+  border-radius: 25px;
+}
+
+.rent-container {
+  color: #ff6060;
+  margin-top: 20px;
+}
+.rent-container .rent-information {
+  text-align: left;
+}
+.rent-container .rent-information .flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rent-container .rent-information .flex .tags {
+  display: flex;
+  margin-left: -40px;
+  flex-wrap: wrap;
+}
+.rent-container .rent-information .flex .tags ul {
+  list-style-type: none;
+}
+.rent-container .rent-information .flex .tags li {
+  text-align: center;
+  color: white;
+  background-color: #ff6060;
+  padding: 5px;
+  border-radius: 12px;
+  width: 100%;
+  min-width: 130px;
+}
+.rent-container .rent-information h1 {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .rent-container .rent-information h1 {
+    font-size: 1.5rem;
+  }
+}
+.rent-container .rent-information .user-info {
+  display: flex;
+  gap: 10px;
+}
+.rent-container .rent-information .user-info p {
+  width: min-content;
+  font-weight: bold;
+}
+.rent-container .rent-information .user-info img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+.rent-container .rent-information .location {
+  font-weight: bold;
+  margin-top: 5px;
+}
+.rent-container .collapse-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  .rent-container .collapse-container {
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.rent-container .collapse-container .rents-dropdown {
+  max-width: 620px;
+  width: 100%;
+}
+@media screen and (max-width: 1290px) {
+  .rent-container .collapse-container .rents-dropdown {
+    max-width: 480px;
+  }
+}
+
+.rent-container .gallery-img {
+  width: 100%;
+  height: 515px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 25px;
+}
+.rent-container .sliders-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -300px;
+  margin-bottom: 225px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.rent-container .sliders-container button {
+  border: none;
+  background: none;
+}
+.rent-container .sliders-container button:hover {
+  cursor: pointer;
+  animation: buttonAnim forwards 250ms;
+}
+@keyframes buttonAnim {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+.rent-container .index {
+  text-align: center;
+  font-weight: bold;
+}
+
+.dropdown-container {
+  border-radius: 5px;
+}
+.dropdown-container .dropdown-wrapper {
+  width: 100%;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  user-select: none;
+}
+.dropdown-container .dropdown-wrapper:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+.dropdown-container .dropdown-wrapper h1 {
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding-left: 20px;
+}
+.dropdown-container .dropdown-wrapper .dropdown-img {
+  padding-right: 20px;
+  transition: transform 350ms;
+}
+.dropdown-container .dropdown-wrapper .dropdown-img.open {
+  transform: rotate(180deg);
+  transform-origin: 26%;
+}
+.dropdown-container .dropdown-wrapper .dropdown-img.close {
+  transform: rotate(0deg);
+  transform-origin: 26%;
+}
+.dropdown-container .dropdown-content {
+  z-index: -1;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: -30px;
+}
+.dropdown-container .dropdown-content p {
+  color: #ff6060;
+  font-size: 1.2rem;
+  padding: 12px;
+}
+.dropdown-container .dropdown-content ul {
+  padding-top: 12px;
+  margin-left: -20px;
+  list-style-type: none;
+}
+.dropdown-container .dropdown-content ul li {
+  padding-bottom: 8px;
+}
+.dropdown-container .dropdown-content.hide {
+  margin-bottom: -45px;
+  animation: contentAnimHide forwards 250ms;
+}
+.dropdown-container .dropdown-content.show {
+  margin-bottom: 50px;
+  animation: contentAnim forwards 250ms;
+}
+
+@keyframes contentAnim {
+  from {
+    opacity: 0;
+    transform: translate(0px, -80px);
+  }
+  to {
+    display: block;
+    opacity: 1;
+    transform: translate(0px, 10px);
+  }
+}
+@keyframes contentAnimHide {
+  from {
+    opacity: 1;
+    transform: translate(0px, 10px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0px, -60px);
+  }
+}
+.error-page {
+  color: #ff6060;
+  text-align: center;
+  width: 100%;
+}
+.error-page h1 {
+  font-size: 12rem;
+  margin-bottom: -10px;
+}
+@media screen and (max-width: 480px) {
+  .error-page h1 {
+    font-size: 7.5rem;
+  }
+}
+.error-page p {
+  font-size: 1.5rem;
+  margin-bottom: 80px;
+}
+.error-page a {
+  color: #ff6060;
+  font-weight: bold;
+}
+
+.footer-container {
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.footer-container img {
+  width: 150px;
+  border: 2px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */

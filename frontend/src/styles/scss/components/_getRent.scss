@@ -1,0 +1,80 @@
+.rent-container {
+	color: #ff6060;
+	margin-top: 20px;
+
+	.rent-information {
+		text-align: left;
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			flex-wrap: wrap;
+			.tags {
+				display: flex;
+				margin-left: -40px;
+				flex-wrap: wrap;
+				ul {
+					list-style-type: none;
+				}
+
+				li {
+					text-align: center;
+					color: white;
+					background-color: #ff6060;
+					padding: 5px;
+					border-radius: 12px;
+					width: 100%;
+					min-width: 130px;
+				}
+			}
+		}
+
+		h1 {
+			margin-bottom: 0;
+			@media screen and (max-width: 480px) {
+				font-size: 1.5rem;
+			}
+		}
+
+		.user-info {
+			display: flex;
+			gap: 10px;
+			p {
+				width: min-content;
+				font-weight: bold;
+			}
+
+			img {
+				width: 68px;
+				height: 68px;
+				border-radius: 50%;
+			}
+		}
+
+		.location {
+			font-weight: bold;
+			margin-top: 5px;
+		}
+	}
+
+	.collapse-container {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media screen and (max-width: 1024px) {
+			margin-bottom: 20px;
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+		}
+		.rents-dropdown {
+			max-width: 620px;
+			width: 100%;
+			@media screen and (max-width: 1290px) {
+				max-width: 480px;
+			}
+		}
+	}
+}

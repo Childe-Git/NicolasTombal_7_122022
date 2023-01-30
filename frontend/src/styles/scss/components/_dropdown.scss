@@ -1,0 +1,90 @@
+.dropdown-container {
+	border-radius: 5px;
+	.dropdown-wrapper {
+		width: 100%;
+		background-color: #ff6060;
+		border: none;
+		border-radius: 5px;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+		user-select: none;
+		&:hover {
+			cursor: pointer;
+			filter: brightness(110%);
+		}
+
+		h1 {
+			font-size: 1.2rem;
+			font-weight: 100;
+			padding-left: 20px;
+		}
+
+		.dropdown-img {
+			padding-right: 20px;
+			transition: transform 350ms;
+
+			&.open {
+				transform: rotate(180deg);
+				transform-origin: 26%;
+			}
+			&.close {
+				transform: rotate(0deg);
+				transform-origin: 26%;
+			}
+		}
+	}
+	.dropdown-content {
+		z-index: -1;
+		position: relative;
+
+		background-color: darken($color: #f6f6f6, $amount: 2);
+		border-radius: 5px;
+		width: 100%;
+		margin-top: -30px;
+
+		p {
+			color: #ff6060;
+			font-size: 1.2rem;
+			padding: 12px;
+		}
+		ul {
+			padding-top: 12px;
+			margin-left: -20px;
+			list-style-type: none;
+			li {
+				padding-bottom: 8px;
+			}
+		}
+		&.hide {
+			margin-bottom: -45px;
+			animation: contentAnimHide forwards 250ms;
+		}
+		&.show {
+			margin-bottom: 50px;
+			animation: contentAnim forwards 250ms;
+		}
+	}
+}
+
+@keyframes contentAnim {
+	from {
+		opacity: 0;
+		transform: translate(0px, -80px);
+	}
+	to {
+		display: block;
+		opacity: 1;
+		transform: translate(0px, 10px);
+	}
+}
+@keyframes contentAnimHide {
+	from {
+		opacity: 1;
+		transform: translate(0px, 10px);
+	}
+	to {
+		opacity: 0;
+		transform: translate(0px, -60px);
+	}
+}

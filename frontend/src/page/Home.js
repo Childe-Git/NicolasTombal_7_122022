@@ -1,32 +1,37 @@
 import React from "react";
-import Banner from "../components/home/Banner";
-import RentList from "../components/home/RentList";
+import { useEffect } from "react";
+import { useState } from "react";
+import Banner from "../components/banner/Banner";
+import RentList from "../components/rentsList/RentList";
 import { logement } from "../data/logement";
-import styled from "styled-components";
-
-const HomeBackground = styled.div`
-  background-image: linear-gradient(#ffffff00 -5%, #00000080 80%);
-  border-radius: 25px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-`;
 
 const Home = () => {
-  return (
-    <main>
-      <Banner />
-      <section>
-        <HomeBackground>
-          {logement[0] &&
-            logement.map((rent) => {
-              return <RentList rents={rent} key={rent.id} />;
-            })}
-        </HomeBackground>
-      </section>
-    </main>
-  );
+	const [text, setText] = useState("");
+	const imgPath = "./img/banner/banner.png";
+	useEffect(() => {
+		setText(
+			<h1>
+				Chez vous, <br className="back-to-line" /> partout et ailleurs
+			</h1>
+		);
+	}, [setText]);
+	return (
+		<main>
+			<div className="home-banner">
+				<Banner imgPath={imgPath} text={text} />
+			</div>
+			<section>
+				<div className="home-container">
+					{/* Map tous les logements pour les retourner
+					dans le composant RentList en passant rents en props */}
+					{logement[0] &&
+						logement.map((rents) => {
+							return <RentList rents={rents} key={rents.id} />;
+						})}
+				</div>
+			</section>
+		</main>
+	);
 };
 
 export default Home;
