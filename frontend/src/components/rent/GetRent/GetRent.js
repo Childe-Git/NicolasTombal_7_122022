@@ -18,13 +18,17 @@ const GetRent = () => {
 			</div>
 			<div className="rent-information">
 				<div className="flex">
-					<h1>{rent.title}</h1>
-					<div className="user-info">
-						<p>{rent.host.name}</p>
-						<img src={rent.host.picture} alt="" />
+					<div className="rent-info">
+						<h1>{rent.title}</h1>
+						<p className="location">{rent.location}</p>
+					</div>
+					<div className="user-info-desktop">
+						<div>
+							<p>{rent.host.name}</p>
+							<img className="user-pict" src={rent.host.picture} alt="" />
+						</div>
 					</div>
 				</div>
-				<p className="location">{rent.location}</p>
 				<div className="flex">
 					<div className="tags">
 						{rent.tags.map((tag) => {
@@ -35,7 +39,18 @@ const GetRent = () => {
 							);
 						})}
 					</div>
-					<Rating rating={rent.rating} />
+					<div className="rating">
+						<Rating rating={rent.rating} />
+					</div>
+				</div>
+				<div className="user-info-mobile">
+					<div>
+						<p>{rent.host.name}</p>
+						<img className="user-pict" src={rent.host.picture} alt="" />
+					</div>
+					<div className="rating">
+						<Rating rating={rent.rating} />
+					</div>
 				</div>
 			</div>
 			<div className="collapse-container">

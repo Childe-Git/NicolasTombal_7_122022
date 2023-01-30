@@ -2,7 +2,11 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-
+	.kasa-logo {
+		@media screen and (max-width: 620px) {
+			width: 180px;
+		}
+	}
 	ul {
 		display: flex;
 		gap: 40px;
@@ -19,6 +23,7 @@ nav {
 		}
 		@media screen and (max-width: 620px) {
 			font-size: 1.1rem;
+			text-transform: uppercase;
 		}
 	}
 }

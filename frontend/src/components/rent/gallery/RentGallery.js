@@ -42,10 +42,12 @@ const RentGallery = ({ rent }) => {
 					</button>
 				</div>
 			)}
-			<div className="index">
-				{/* Affiche l'index de rents.picture, + 1 car l'index commence à 0 */}
-				{currentIndex + 1} / {rent.pictures.length}
-			</div>
+			{rent.pictures.length <= 1 ? null : (
+				<div className="index">
+					{/* Affiche l'index de rents.picture, + 1 car l'index commence à 0 */}
+					{currentIndex + 1} / {rent.pictures.length}
+				</div>
+			)}
 		</>
 	);
 };

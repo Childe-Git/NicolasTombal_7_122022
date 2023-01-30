@@ -24,6 +24,11 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 620px) {
+  nav .kasa-logo {
+    width: 180px;
+  }
+}
 nav ul {
   display: flex;
   gap: 40px;
@@ -44,6 +49,7 @@ nav li:hover {
 @media screen and (max-width: 620px) {
   nav li {
     font-size: 1.1rem;
+    text-transform: uppercase;
   }
 }
 
@@ -166,6 +172,9 @@ nav li:hover {
   font-size: 1rem;
 }
 
+.about-list {
+  margin-bottom: 20px;
+}
 .about-list div {
   margin-left: auto;
   margin-right: auto;
@@ -196,13 +205,61 @@ nav li:hover {
   margin-top: 20px;
 }
 .rent-container .rent-information {
+  margin-top: -25px;
   text-align: left;
 }
 .rent-container .rent-information .flex {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   flex-wrap: wrap;
+}
+.rent-container .rent-information .flex .rent-info {
+  margin-right: 20px;
+}
+.rent-container .rent-information .flex .rent-info h1 {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .rent-container .rent-information .flex .rent-info h1 {
+    font-size: 1.5rem;
+  }
+}
+.rent-container .rent-information .flex .rent-info .location {
+  font-weight: bold;
+  margin-top: 8px;
+}
+@media screen and (max-width: 760px) {
+  .rent-container .rent-information .flex .user-info-desktop {
+    display: none;
+  }
+}
+.rent-container .rent-information .flex .user-info-desktop div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+.rent-container .rent-information .flex .user-info-desktop div p {
+  width: min-content;
+  font-weight: bold;
+}
+.rent-container .rent-information .flex .user-info-desktop div .user-pict {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+.rent-container .rent-information .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.rent-container .rent-information .flex .rating {
+  margin-top: 10px;
+}
+@media screen and (max-width: 760px) {
+  .rent-container .rent-information .flex .rating {
+    display: none;
+  }
 }
 .rent-container .rent-information .flex .tags {
   display: flex;
@@ -221,30 +278,31 @@ nav li:hover {
   width: 100%;
   min-width: 130px;
 }
-.rent-container .rent-information h1 {
-  margin-bottom: 0;
+.rent-container .rent-information .user-info-mobile {
+  display: none;
 }
-@media screen and (max-width: 480px) {
-  .rent-container .rent-information h1 {
-    font-size: 1.5rem;
+@media screen and (max-width: 760px) {
+  .rent-container .rent-information .user-info-mobile {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
   }
-}
-.rent-container .rent-information .user-info {
-  display: flex;
-  gap: 10px;
-}
-.rent-container .rent-information .user-info p {
-  width: min-content;
-  font-weight: bold;
-}
-.rent-container .rent-information .user-info img {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-}
-.rent-container .rent-information .location {
-  font-weight: bold;
-  margin-top: 5px;
+  .rent-container .rent-information .user-info-mobile div {
+    display: flex;
+    gap: 10px;
+  }
+  .rent-container .rent-information .user-info-mobile div p {
+    width: min-content;
+    font-weight: bold;
+  }
+  .rent-container .rent-information .user-info-mobile div .user-pict {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+  }
+  .rent-container .rent-information .user-info-mobile .rating {
+    margin-top: 15px;
+  }
 }
 .rent-container .collapse-container {
   margin-top: 40px;
@@ -303,6 +361,9 @@ nav li:hover {
   }
 }
 .rent-container .index {
+  color: white;
+  position: relative;
+  top: -42px;
   text-align: center;
   font-weight: bold;
 }
@@ -363,11 +424,9 @@ nav li:hover {
   padding-bottom: 8px;
 }
 .dropdown-container .dropdown-content.hide {
-  margin-bottom: -45px;
   animation: contentAnimHide forwards 250ms;
 }
 .dropdown-container .dropdown-content.show {
-  margin-bottom: 50px;
   animation: contentAnim forwards 250ms;
 }
 
@@ -390,6 +449,7 @@ nav li:hover {
   to {
     opacity: 0;
     transform: translate(0px, -60px);
+    height: 0;
   }
 }
 .error-page {

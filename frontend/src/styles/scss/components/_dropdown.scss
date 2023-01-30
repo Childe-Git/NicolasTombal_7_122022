@@ -57,11 +57,9 @@
 			}
 		}
 		&.hide {
-			margin-bottom: -45px;
 			animation: contentAnimHide forwards 250ms;
 		}
 		&.show {
-			margin-bottom: 50px;
 			animation: contentAnim forwards 250ms;
 		}
 	}
@@ -86,5 +84,6 @@
 	to {
 		opacity: 0;
 		transform: translate(0px, -60px);
+		height: 0;
 	}
 }

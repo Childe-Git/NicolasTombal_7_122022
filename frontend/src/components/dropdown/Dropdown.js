@@ -22,6 +22,8 @@ const Dropdown = ({ title, content }) => {
 				</div>
 			</div>
 			{/* Ajoute un espace entre chaque dropdown */}
+			<br />
+			<br />
 		</>
 	);
 };
