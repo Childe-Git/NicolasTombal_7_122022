@@ -11,15 +11,6 @@
 		max-width: 340px;
 		&:hover {
 			cursor: pointer;
-			animation: rentAnimCard forwards 250ms;
-		}
-		@keyframes rentAnimCard {
-			from {
-				scale: 1;
-			}
-			to {
-				scale: 1.1;
-			}
 		}
 		img {
 			position: relative;

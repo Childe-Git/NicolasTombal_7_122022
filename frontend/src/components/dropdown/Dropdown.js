@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Dropdown = ({ title, content }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	useEffect(() => {
+		// cache l'animation des dropdown pendant 0.8s
+
+		setInterval(() => {
+			const dropdown = document.getElementsByClassName("dropdown-content");
+			for (let i = 0; i < dropdown.length; i++) {
+				dropdown[i].style.visibility = "visible";
+			}
+		}, 800);
+	});
 
 	return (
 		<>

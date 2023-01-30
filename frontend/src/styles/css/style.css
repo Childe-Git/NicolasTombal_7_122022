@@ -146,15 +146,6 @@ nav li:hover {
 }
 .card-container .card:hover {
   cursor: pointer;
-  animation: rentAnimCard forwards 250ms;
-}
-@keyframes rentAnimCard {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1.1;
-  }
 }
 .card-container .card img {
   position: relative;
@@ -173,7 +164,7 @@ nav li:hover {
 }
 
 .about-list {
-  margin-bottom: 20px;
+  margin-top: 55px;
 }
 .about-list div {
   margin-left: auto;
@@ -403,6 +394,7 @@ nav li:hover {
   transform-origin: 26%;
 }
 .dropdown-container .dropdown-content {
+  visibility: hidden;
   z-index: -1;
   position: relative;
   background-color: #f1f1f1;
