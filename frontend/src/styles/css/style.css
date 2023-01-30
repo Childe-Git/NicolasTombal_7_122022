@@ -61,7 +61,10 @@ nav li:hover {
     scale: 1.1;
   }
 }
-.home-container {
+.home-page {
+  animation: pageAnim forwards 650ms;
+}
+.home-page .home-container {
   position: relative;
   z-index: 1;
   background-color: #f1f1f1;
@@ -74,12 +77,20 @@ nav li:hover {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1220px) {
-  .home-container {
+  .home-page .home-container {
     gap: 30px;
     row-gap: 50px;
   }
 }
 
+@keyframes pageAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .home-banner {
   margin-top: 40px;
   width: 100%;
@@ -163,20 +174,31 @@ nav li:hover {
   font-size: 1rem;
 }
 
-.about-list {
+.about-page {
+  animation: pageAnim forwards 650ms;
+}
+.about-page .about-list {
   margin-top: 55px;
 }
-.about-list div {
+.about-page .about-list div {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
 }
 @media screen and (max-width: 425px) {
-  .about-list div {
+  .about-page .about-list div {
     width: initial;
   }
 }
 
+@keyframes pageAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .about-banner {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -191,6 +213,18 @@ nav li:hover {
   border-radius: 25px;
 }
 
+.rent-page {
+  animation: pageAnim forwards 650ms;
+}
+
+@keyframes pageAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .rent-container {
   color: #ff6060;
   margin-top: 20px;

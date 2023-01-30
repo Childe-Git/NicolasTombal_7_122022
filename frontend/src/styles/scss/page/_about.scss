@@ -1,11 +1,24 @@
-.about-list {
-	margin-top: 55px;
-	div {
-		margin-left: auto;
-		margin-right: auto;
-		width: 95%;
-		@media screen and(max-width: 425px) {
-			width: initial;
+.about-page {
+	animation: pageAnim forwards 650ms;
+
+	.about-list {
+		margin-top: 55px;
+		div {
+			margin-left: auto;
+			margin-right: auto;
+			width: 95%;
+			@media screen and(max-width: 425px) {
+				width: initial;
+			}
 		}
+	}
+}
+
+@keyframes pageAnim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

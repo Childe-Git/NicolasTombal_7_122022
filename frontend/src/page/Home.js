@@ -16,7 +16,7 @@ const Home = () => {
 		);
 	}, [setText]);
 	return (
-		<main>
+		<main className="home-page">
 			<div className="home-banner">
 				<Banner imgPath={imgPath} text={text} />
 			</div>

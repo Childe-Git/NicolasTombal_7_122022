@@ -17,7 +17,7 @@ const About = () => {
 	}, [setImgPath]);
 
 	return (
-		<main>
+		<main className="about-page">
 			<div className="about-banner">
 				<Banner imgPath={imgPath} />
 			</div>

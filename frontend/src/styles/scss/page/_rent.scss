@@ -1,0 +1,11 @@
+.rent-page {
+	animation: pageAnim forwards 650ms;
+}
+@keyframes pageAnim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

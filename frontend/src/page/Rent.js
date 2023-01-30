@@ -3,9 +3,9 @@ import GetRent from "../components/rent/GetRent/GetRent";
 
 const Rent = () => {
 	return (
-		<div>
+		<main className="rent-page">
 			<GetRent />
-		</div>
+		</main>
 	);
 };
 
