@@ -8,7 +8,7 @@ const GetRent = () => {
 	const location = useLocation();
 	const rent = location.state;
 
-	const { id } = useParams();
+	// const { id } = useParams();
 	console.log(rent);
 
 	return (

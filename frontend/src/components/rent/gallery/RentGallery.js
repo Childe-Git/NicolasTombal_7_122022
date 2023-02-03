@@ -31,23 +31,27 @@ const RentGallery = ({ rent }) => {
 				alt="rent-pict"
 			/>
 			{/* Vérifie si il y + d'une img, si non, affiche pas les flèches */}
-			{rent.pictures.length <= 1 ? null : (
-				// si oui, affiche les flèches,
-				<div className="sliders-container">
-					<button onClick={previousSlide}>
-						<img src="./img/left-arrow.svg" alt="arrow" />
-					</button>
-					<button onClick={nextSlide}>
-						<img src="./img/right-arrow.svg" alt="arrow" />
-					</button>
-				</div>
-			)}
-			{rent.pictures.length <= 1 ? null : (
-				<div className="index">
-					{/* Affiche l'index de rents.picture, + 1 car l'index commence à 0 */}
-					{currentIndex + 1} / {rent.pictures.length}
-				</div>
-			)}
+			{/* // si oui, affiche les flèches, */}
+			<div
+				className={
+					"sliders-container " +
+					(rent.pictures.length <= 1 ? "not-visible" : null)
+				}>
+				<button onClick={previousSlide}>
+					<img className="arrow" src="./img/left-arrow.svg" alt="arrow" />
+				</button>
+				<button onClick={nextSlide}>
+					<img className="arrow" src="./img/right-arrow.svg" alt="arrow" />
+				</button>
+			</div>
+
+			<div
+				className={
+					"index " + (rent.pictures.length <= 1 ? "not-visible" : null)
+				}>
+				{/* Affiche l'index de rents.picture, + 1 car l'index commence à 0 */}
+				{currentIndex + 1} / {rent.pictures.length}
+			</div>
 		</>
 	);
 };

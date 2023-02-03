@@ -3,8 +3,11 @@
 	margin-top: 20px;
 
 	.rent-information {
-		margin-top: -25px;
+		margin-top: -110px;
 		text-align: left;
+		@media screen and (max-width: 425px) {
+			margin-top: -70px;
+		}
 		.flex {
 			display: flex;
 			justify-content: space-between;
@@ -28,7 +31,7 @@
 					display: none;
 				}
 				div {
-					margin-top: 10px;
+					margin-top: 20px;
 					margin-bottom: 10px;
 					display: flex;
 					gap: 10px;
@@ -81,6 +84,7 @@
 				display: flex;
 				justify-content: space-between;
 				flex-direction: row-reverse;
+
 				div {
 					display: flex;
 					gap: 10px;
@@ -96,6 +100,7 @@
 				}
 				.rating {
 					margin-top: 15px;
+					padding-right: 10px;
 				}
 			}
 		}

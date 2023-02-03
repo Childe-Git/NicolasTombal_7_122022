@@ -1,5 +1,6 @@
 .dropdown-container {
 	border-radius: 5px;
+
 	.dropdown-wrapper {
 		width: 100%;
 		background-color: #ff6060;
@@ -9,6 +10,7 @@
 		justify-content: space-between;
 		color: white;
 		user-select: none;
+
 		&:hover {
 			cursor: pointer;
 			filter: brightness(110%);
@@ -48,6 +50,9 @@
 			color: #ff6060;
 			font-size: 1.2rem;
 			padding: 12px;
+			@media screen and(max-width: 405px) {
+				font-size: 1rem;
+			}
 		}
 		ul {
 			padding-top: 12px;
