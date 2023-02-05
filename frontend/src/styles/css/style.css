@@ -306,12 +306,13 @@ nav li:hover {
   }
 }
 .rent-container .rent-information .flex .tags {
-  display: flex;
   margin-left: -40px;
-  flex-wrap: wrap;
 }
 .rent-container .rent-information .flex .tags ul {
   list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .rent-container .rent-information .flex .tags li {
   text-align: center;
@@ -319,8 +320,8 @@ nav li:hover {
   background-color: #ff6060;
   padding: 5px;
   border-radius: 12px;
-  width: 100%;
   min-width: 130px;
+  font-size: 0.9rem;
 }
 .rent-container .rent-information .user-info-mobile {
   display: none;

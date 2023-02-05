@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Rating from "../rating/Rating";
 import RentGallery from "../gallery/RentGallery";
 import Dropdown from "../../dropdown/Dropdown";
@@ -31,13 +31,11 @@ const GetRent = () => {
 				</div>
 				<div className="flex">
 					<div className="tags">
-						{rent.tags.map((tag) => {
-							return (
-								<ul key={tag}>
-									<li>{tag}</li>
-								</ul>
-							);
-						})}
+						<ul>
+							{rent.tags.map((tag, i) => {
+								return <li key={i}>{tag}</li>;
+							})}
+						</ul>
 					</div>
 					<div className="rating">
 						<Rating rating={rent.rating} />
