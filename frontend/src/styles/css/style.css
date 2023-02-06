@@ -124,6 +124,11 @@ nav li:hover {
     margin-top: -180px;
   }
 }
+@media screen and (max-width: 525px) {
+  .home-banner .text-container {
+    margin-top: -180px;
+  }
+}
 .home-banner .text-container h1 {
   filter: brightness(100%);
   color: white;
@@ -139,7 +144,7 @@ nav li:hover {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
   .home-banner .text-container h1 {
     text-align: left;
     padding-left: 10px;
